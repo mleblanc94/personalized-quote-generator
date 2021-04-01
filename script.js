@@ -6,14 +6,26 @@ const newQuoteBtn = document.getElementById('newQuote');
 let apiQuotes = [];
 
 async function getQuotes() {
-    const response = 'https://type.fit/api/quotes';
+    const apiUrl = 'https://type.fit/api/quotes';
        try {
-     const realResponse = await fetch(response);
-     const apiQuotes = await realResponse.json();
-     console.log(apiQuotes);
+     const response = await fetch(apiUrl);
+     const apiQuotes = await response.json();
+    //  newQuote();
+     console.log(apiQuotes)
   } catch(error) {
       console.log("An error occurred")
         }
      }
 
+
+     function newQuote() {
+         const currentQuote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+         console.log(currentQuote)
+         quote.textContent = currentQuote.text;
+         author.textContent = currentQuote.author;
+     }
+
 getQuotes();
+
+
+newQuoteBtn.addEventListener("click", newQuote);
