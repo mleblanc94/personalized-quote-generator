@@ -5,6 +5,7 @@ const newQuoteBtn = document.getElementById('newQuote');
 
 let apiQuotes = [];
 
+//Pulling the quotes from the API
 async function getQuotes() {
     const apiUrl = 'https://type.fit/api/quotes';
        try {
