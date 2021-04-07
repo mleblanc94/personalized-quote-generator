@@ -25,12 +25,12 @@ async function getQuotes() {
      newQuote();
      console.log(apiQuotes)
   } catch(error) {
-      console.log("An error occurred")
+      console.log("An error occurred");
         }
      }
 
   function tweetQuote() {
-
+    
   }
 
 newQuoteBtn.addEventListener("click", newQuote);
