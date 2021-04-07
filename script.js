@@ -2,9 +2,10 @@ const quote = document.getElementById('quote-container');
 const author = document.getElementById('author-container');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('newQuote');
+const loader = document.getElementById('loader');
+const mainContainer = document.getElementById('main-container');
 
 let apiQuotes = [];
-
 
 function newQuote() {
   const currentQuote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
