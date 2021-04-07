@@ -30,7 +30,8 @@ async function getQuotes() {
      }
 
   function tweetQuote() {
-    
+    const tweetTheQuote = `https://twitter.com/intent/tweet?text=${quote.textContent} - ${author.textContent}`;
+    window.open(tweetTheQuote, '_blank');
   }
 
 newQuoteBtn.addEventListener("click", newQuote);
